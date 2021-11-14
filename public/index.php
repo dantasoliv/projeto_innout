@@ -7,6 +7,7 @@ require_once(dirname(__FILE__, 2) . '/src/config/database.php'); // inportando a
 $sql = 'select * from users'; // Query de consulta no banco de dados
 $result = Database::getResultfromQuery($sql); // importando o método para executrar a query e colocando na variável $result
 
-while($row = $result->fetch_assoc()) { // estrutura de repetição para mostrar o resutado da query
+while($row = $result->fetch_assoc()) { // Estrutura de repetição para mostar o resultado da query
+    print_r($row);
     echo '<br>';
 }
