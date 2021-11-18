@@ -15,4 +15,6 @@ require_once(dirname(__FILE__, 2) . '/src/models/User.php');
 
 $user = new User(['name' => 'Lucas', 'email' => 'lucas@cod3r.com.br']);
 print_r($user);
-echo 'Fim!';
+$user->email = 'lucas_alterado@cod3er.com.br';
+echo '<br>';
+print_r($user->email);

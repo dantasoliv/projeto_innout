@@ -11,17 +11,17 @@ class Model {
 
     public function loadFromArray($arr) {
         if($arr) {
-            foreach($arr as $key => $values) {
-                $this->set($key, $values);
+            foreach($arr as $key => $value) {
+                $this->$key = $value;
             }
         }
     }
 
-    public function get($key) {
+    public function __get($key) {
         return $this->values[$key];
     }
 
-    public function set($key, $values) {
-        $this->values[$key] = $values;
+    public function __set($key, $value) {
+        $this->values[$key] = $value;
     }
 }
